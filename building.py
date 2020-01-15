@@ -78,8 +78,7 @@ for bldg in all_Bldgs:
 
     date_array = str(bldg.date_constructed).split(" ")
     date = date_array[0]
-    print(f"{bldg.address} was purchased by {bldg.owner} on {date} and has {bldg.stories} stories.")
+    split_date = date.split("-")
+    final_date = f"{split_date[1]}/{split_date[2]}/{split_date[0]}"
+    print(f"{bldg.address} was purchased by {bldg.owner} on {final_date} and has {bldg.stories} stories.")
     print()
-
-
-
