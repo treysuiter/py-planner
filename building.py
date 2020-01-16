@@ -50,35 +50,3 @@ class Building:
     def purchase(self, purchaser):
 
         self.owner = purchaser
-
-
-batman_bldg = Building("333 Commerce St", 100)
-NSS_bldg = Building("301 Plus Park Blvd", 3)
-my_house_bldg = Building("Anderon Ln", 1)
-tAndC_ford_bldg = Building("123 Gallatin Rd", 2)
-madison_commCenter_bldg = Building("345 DuPont Ave", 4)
-
-batman_bldg.construct()
-NSS_bldg.construct()
-my_house_bldg.construct()
-tAndC_ford_bldg.construct()
-madison_commCenter_bldg.construct()
-
-batman_bldg.purchase("Jimmy Jam")
-NSS_bldg.purchase("Fred Flippy")
-my_house_bldg.purchase("Biance")
-tAndC_ford_bldg.purchase("Sam Silly")
-madison_commCenter_bldg.purchase("Alan Arf")
-
-all_Bldgs = [batman_bldg, NSS_bldg, my_house_bldg, tAndC_ford_bldg, madison_commCenter_bldg]
-
-# 800 8th Street was purchased by Bob Builder on 03/14/2018 and has 12 stories.
-
-for bldg in all_Bldgs:
-
-    date_array = str(bldg.date_constructed).split(" ")
-    date = date_array[0]
-    split_date = date.split("-")
-    final_date = f"{split_date[1]}/{split_date[2]}/{split_date[0]}"
-    print(f"{bldg.address} was purchased by {bldg.owner} on {final_date} and has {bldg.stories} stories.")
-    print()
